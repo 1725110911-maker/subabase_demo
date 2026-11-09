@@ -9,6 +9,7 @@ $def with(datos)
         <th>Nombre</th>
         <th>Email</th>
         <th>Telefono</th>
+        <th>Ver</th>
     </thead>
     <tbody>
     $for dato in datos:
@@ -17,6 +18,9 @@ $def with(datos)
             <td> $dato["nombre"] </td>
             <td> $dato["email"]</td>
             <td> $dato["telefono"]</td>
+            <td><a href="/ver_contacto/$dato['id']">Ver</a></td>
+            <!--<td><a href="/actualizar_contacto/$dato['id']">Actualizar contacto</a></td>-->
+            <td><a href="/borrar_contacto/$dato['id']">Borrar</a></td>
         </tr>
     </tbody>
 </table>

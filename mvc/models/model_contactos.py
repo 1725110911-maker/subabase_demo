@@ -22,7 +22,7 @@ class ModelContactos:
 
     def buscarContacto(self, id_contacto:int):
         response = self.supabase.table("contactos").select("*").eq("id", id_contacto).execute()
-        return response.data   
+        return response.data[0]
 
     def insertarContacto(self, nombre:str, email:str, telefono:str):
         datos = {

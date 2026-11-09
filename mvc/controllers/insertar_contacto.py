@@ -8,14 +8,16 @@ class Insertar_contacto:
         return render.insertar_contacto()
 
     def POST(self):
+        #ACCEDER A LOS DATOS DEL FORMULARIO
         formulario = web.input()
         nombre = formulario['nombre']
         email = formulario['email']
         telefono = formulario['telefono']
 
-        print("Nombre: ", nombre)
-        print("Email: ", email)
-        print("Teléfono: ", telefono)
+        #IMPRIME LOS DATOS EN CONSOLA
+        #print("Nombre: ", nombre)
+        #print("Email: ", email)
+        #print("Teléfono: ", telefono)
 
         model_contactos = ModelContactos()
         datos = model_contactos.insertarContacto(nombre, email, telefono)
