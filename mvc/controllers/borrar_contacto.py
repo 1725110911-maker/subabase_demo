@@ -4,4 +4,7 @@ render = web.template.render('views/', base='template')
 
 class Borrar_contacto:
     def GET(self, id_contacto):
-        return render.borrar_contacto(id_contacto)
+        model_contactos = ModelContactos()
+        contacto = model_contactos.buscarContacto(id_contacto)
+        print(contacto)
+        return render.borrar_contacto(contacto)
