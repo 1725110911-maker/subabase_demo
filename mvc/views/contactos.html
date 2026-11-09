@@ -1,0 +1,22 @@
+$def with(datos)
+<h1>Contactos</h1>
+
+$:datos
+
+<table border="1px">
+    <thead>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Telefono</th>
+    </thead>
+    <tbody>
+    $for dato in datos:
+        <tr>
+            <td> $dato["id"] </td>
+            <td> $dato["nombre"] </td>
+            <td> $dato["email"]</td>
+            <td> $dato["telefono"]</td>
+        </tr>
+    </tbody>
+</table>
